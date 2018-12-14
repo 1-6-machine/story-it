@@ -1,14 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:context=".ui.preferences.PreferencesFragment">
 
     <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Hello"/>
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Players" />
 
-</FrameLayout>
+    <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+        <ScrollView
+                android:id="@+id/sView"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="200"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="left"
+        >
+            <TextView
+                    android:id="@+id/playerList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="" />
+
+
+
+        </ScrollView>
+
+        <Button
+                android:id="@+id/newPlayer"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="+"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+                android:id="@+id/removePlayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="-"
+                android:layout_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+        <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="left"
+                android:layout_weight="2"
+                android:text="Number of rounds"/>
+
+        <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Random order"
+                android:layout_weight="2"
+                android:gravity="right" />
+        <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of characters"
+                android:layout_weight="2"
+                android:gravity="right" />
+        <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="Number of words shown"
+                android:layout_weight="2"
+                android:gravity="right" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <NumberPicker
+                android:id="@+id/roundNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="63dp"
+                android:gravity="left"
+                android:layout_weight="1"
+        />
+        <CheckBox
+                android:id="@+id/checkRandom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                android:gravity="center" />
+        <NumberPicker
+                android:id="@+id/charactersNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="63dp"
+                android:gravity="left"
+                android:layout_weight="1"
+        />
+        <NumberPicker
+                android:id="@+id/wordsNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="63dp"
+                android:gravity="left"
+                android:layout_weight="1"
+        />
+
+
+    </LinearLayout>
+
+
+
+
+    <Button
+            android:id="@+id/start"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="START"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+</LinearLayout>

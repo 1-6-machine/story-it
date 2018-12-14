@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import mvvm.coding.story_it.R
 
 class PreferencesFragment : Fragment() {
-
+    private 2
     companion object {
         fun newInstance() = PreferencesFragment()
     }
