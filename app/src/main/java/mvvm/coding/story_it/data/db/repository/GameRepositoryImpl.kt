@@ -22,6 +22,15 @@ class GameRepositoryImpl(
     private val scoreDao: ScoreDao)
     : GameRepository {
 
+    private val currentGame = MutableLiveData<Game>()
+
+    override fun setGame(game: Game) {
+        currentGame.value=game
+    }
+
+    override fun getGame(): LiveData<Game> {
+        return currentGame
+    }
     @WorkerThread
     override fun getPlayers(): List<Player> {
            return playerDao.getPlayers()

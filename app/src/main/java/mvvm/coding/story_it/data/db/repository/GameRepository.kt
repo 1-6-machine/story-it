@@ -4,6 +4,7 @@ import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
 import mvvm.coding.story_it.data.db.entity.Player
 import mvvm.coding.story_it.data.db.entity.Score
+import mvvm.coding.story_it.data.model.Game
 
 interface GameRepository {
     @WorkerThread
@@ -18,4 +19,7 @@ interface GameRepository {
     fun addPlayer(player: Player)
     @WorkerThread
     fun addScore(score: Score)
+
+    fun setGame(game: Game)
+    fun getGame():LiveData<Game>
 }
