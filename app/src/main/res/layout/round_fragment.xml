@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.round.RoundFragment">
-
-    <TextView
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="viewModel" type="mvvm.coding.story_it.ui.round.RoundFragment"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Hello"/>
+            tools:context=".ui.round.RoundFragment">
+        <TextView
+                android:id="@+id/title"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Round fragment"
+                android:layout_marginTop="36dp"
+                android:layout_width="wrap_content"
+                android:textSize="46sp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"/>
 
-</FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

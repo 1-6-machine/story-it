@@ -37,6 +37,7 @@ class startFragment : Fragment() {
     private fun setupListeners(){
         new_game_btn.setOnClickListener { findNavController().navigate(startFragmentDirections.actionStartFragmentToPreferencesFragment()) }
         leaderboard_btn.setOnClickListener { findNavController().navigate(startFragmentDirections.actionStartFragmentToLeaderboardFragment()) }
+        //action_preferencesFragment_to_roundFragment
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
